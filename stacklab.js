@@ -42,13 +42,23 @@ function flatten(arr) {
   console.log(trampoline(flattenedArray))
 
 //Part 3: Deferred Execution
+const primebar = document.creatElement("primebar")
+body.appendChild(primebar)
+function collectPrimes(limit) {
+  const primes = [];
+  for (let i = 2; i <= limit; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+  return primes;
+}
+const primes = collectPrimes(100); 
+console.log(primes); 
 
-
-
-//     console.log("first");
-// setTimeout(() => {
-//     console.log("second");
-// }, 4000);
-// console.log("third");
+setTimeout(function () {
+  answer = window.prompt("  These are the prime number between 2 to 100!");
+  firstStep();
+}, 4000);
 
 
