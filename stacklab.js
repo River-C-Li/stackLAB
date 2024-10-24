@@ -1,26 +1,13 @@
-// Part 1 Stack Overflow, Part 2: Trampolines
-let counter = 100; // Declaring the global variable
+// Part 1 Stack Overflow, 
+let counter = 3; // Declaring the global variable
 
 try{
 function incrementCounter() {
-  counter++;
+  console.log(counter)
+  counter=counter+1;
 }
-console.log(counter); // Outputs 0
 incrementCounter(100);
-console.log(counter); // Outputs 1
-
-// function incrementAndRecurse(num) {
-    // Base case: stop recursion when num reaches 4
-    if (num >= 9) {
-      return num;
-    }
-    // Increment num
-    num++; 
-    // Recursive call
-    return incrementAndRecurse(num); 
-  }
-  console.log(incrementAndRecurse(4)); 
-  console.log(counter); 
+console.log(counter); 
 } catch (error) {
     console.log("erro")     
     } 
@@ -28,13 +15,7 @@ console.log(counter); // Outputs 1
     console.log("OOPS!")
     }
 
-    console.log("first");
-setTimeout(() => {
-    console.log("second");
-}, 4000);
-console.log("third");
-
-
+//part-2   Trampolines
 // Write a recursive function that completely flattens an array of nested arrays,
 function flatten(arr) {
     let result = []; 
@@ -59,5 +40,15 @@ function flatten(arr) {
     return result;
   }
   console.log(trampoline(flattenedArray))
+
+//Part 3: Deferred Execution
+
+
+
+//     console.log("first");
+// setTimeout(() => {
+//     console.log("second");
+// }, 4000);
+// console.log("third");
 
 
