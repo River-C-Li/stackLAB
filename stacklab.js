@@ -10,7 +10,7 @@ incrementCounter(100);
 console.log(counter); // Outputs 1
 
 // function incrementAndRecurse(num) {
-    // Base case: stop recursion when num reaches 5
+    // Base case: stop recursion when num reaches 4
     if (num >= 9) {
       return num;
     }
@@ -19,7 +19,7 @@ console.log(counter); // Outputs 1
     // Recursive call
     return incrementAndRecurse(num); 
   }
-  console.log(incrementAndRecurse(5)); 
+  console.log(incrementAndRecurse(4)); 
   console.log(counter); 
 } catch (error) {
     console.log("erro")     
