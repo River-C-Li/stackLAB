@@ -67,6 +67,12 @@ primes.forEach((prim) => {
 
 setTimeout(function () {
   answer = window.alert("These are the prime number between 2 to 100!");
+  firstStep();
 }, 4000);
 
+
+// function firstStep() {
+//   if ( ) {
+//       alert("These are the prime number between 2 to 100!");
+//     }
 
