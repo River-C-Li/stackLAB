@@ -44,6 +44,7 @@ function flatten(arr) {
 //Part 3: Deferred Execution
 const primebar = document.creatElement("primebar")
 body.appendChild(primebar)
+
 function collectPrimes(limit) {
   const primes = [];
   for (let i = 2; i <= limit; i++) {
@@ -54,10 +55,18 @@ function collectPrimes(limit) {
   return primes;
 }
 const primes = collectPrimes(100); 
-console.log(primes); 
+// console.log(primes); 
+
+primes.forEach((prim) => {
+  const primeP = document.createElement("p");
+  primeP.textContent = `
+      ${prim}
+      `;
+  primebar.appendChild(primeP);
+});
 
 setTimeout(function () {
-  answer = window.alert("  These are the prime number between 2 to 100!");
+  answer = window.alert("These are the prime number between 2 to 100!");
   firstStep();
 }, 4000);
 
