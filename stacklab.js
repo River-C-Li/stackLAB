@@ -49,20 +49,8 @@ function flatten(arr) {
   }
   const nestedArray = [1, [2, 3], [4, [5, 6]]];
   const flattenedArray = flatten(nestedArray);
-  console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6]
+  // console.log(flattenedArray); // Output: [1, 2, 3, 4, 5, 6]
 
-// // eg
-// // 1
-  const factorial = (n) => {
-    if (n === 0) return 1; // The base case, to stop recursion
-    return n * factorial(n - 1); // The recursive call
-  }
-// 2 changed from 1
-  const facto = (n, a = 1) => {
-    if (n === 0) return a;
-    return () => facto(n - 1, n * a);
-  }
-// 3
   const trampoline = (f, ...args) => {
     let result = f(...args);
     while (typeof result === "function") {
@@ -70,6 +58,6 @@ function flatten(arr) {
     }
     return result;
   }
-  console.log(trampoline(facto(10000)))
+  console.log(trampoline(flattenedArray))
 
 
