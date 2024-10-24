@@ -57,7 +57,7 @@ const primes = collectPrimes(100);
 console.log(primes); 
 
 setTimeout(function () {
-  answer = window.prompt("  These are the prime number between 2 to 100!");
+  answer = window.alert("  These are the prime number between 2 to 100!");
   firstStep();
 }, 4000);
 
